@@ -1,4 +1,9 @@
 
+reate database test_sql_case110;
+
+\c test_sql_case110;
+
+
 create type token_type as enum('default', 'invalid', 'deleted');
 create table users(id bigserial primary key, user_id integer, token token_type);
 create index idx_user_token on users(user_id, token);

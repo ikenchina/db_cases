@@ -13,3 +13,18 @@
 
 一般情况下是正确的。
 
+
+**获取表的统计信息**
+```
+select * from pg_stats where tablename='users';
+```
+
+**获取主键信息**
+```
+SELECT relpages, reltuples FROM pg_class WHERE relname = 'users_pkey';
+```
+
+**获取主表信息**
+```
+SELECT relpages, reltuples FROM pg_class WHERE relname = 'users';
+```
